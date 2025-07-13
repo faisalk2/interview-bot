@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #e8eeff;
+  width: 100%;
+  padding: 6px 18px 6px 18px;
+  border-radius: 8px;
+  margin: 10px 0px 15px 0px;
+}
+.instructionsHeaderIcon {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.instructionsHeaderTitle {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 21.28px;
+  letter-spacing: 0.02em;
+  color: #192890;
+}
+
+.instructionLists {
+  list-style-type: disc;
+  padding-left: 19px;
+  flex-direction: column;
+  display: flex;
+  gap: 10px;
+}
+
+.instructionLists > li {
+  list-style-type: disc;
+  font-family: "Roboto-regular";
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 19.95px;
+  text-align: justify;
+}

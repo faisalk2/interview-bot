@@ -1,0 +1,36 @@
+.name {
+  font-family: Roboto-regular;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0.01em;
+  text-align: center;
+  margin-bottom: 6px;
+}
+
+.designation {
+  font-family: Roboto-regular;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #6f747e;
+  margin-bottom: 24px;
+}
+
+.profileContainer {
+  margin-bottom: 10px;
+}
+
+.profileImage {
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid gray;
+}
+
+.ProfileRating {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8px;
+}

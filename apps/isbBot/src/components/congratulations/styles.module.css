@@ -1,0 +1,64 @@
+.container {
+  margin: auto;
+  width: fit-content;
+  position: relative;
+  /* border: 1px solid red; */
+}
+
+.congratulationsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* border: 1px solid green; */
+}
+
+.title {
+  width: 571px;
+  height: 32px;
+  color: var(--Color-1, #2b4078);
+  font-family: Segoe-bold;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 31.92px;
+  text-align: center;
+  margin-top: 12px;
+  margin-bottom: 25px;
+}
+
+.submissionSuccessText {
+  width: 660px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.submissionSuccessText > p {
+  font-family: Roboto-regular;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21.28px;
+  text-align: center;
+}
+
+.thankyoutext {
+  font-family: Roboto-regular;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18.62px;
+  text-align: center;
+  color: #a3a3a3;
+  margin-top: 25px;
+}
+
+.confettiOverlay {
+  width: 700px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

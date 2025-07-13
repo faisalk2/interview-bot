@@ -1,0 +1,11 @@
+.applicationContainer {
+    position: relative;
+    background-color: #FFFFFF;
+  }
+
+  .formContainer {
+    margin-left: 300px;
+    padding: 0px 45px 60px 45px;
+    height: 100vh;
+    overflow-y: scroll;
+  }

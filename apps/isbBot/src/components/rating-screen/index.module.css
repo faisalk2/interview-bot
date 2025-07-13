@@ -1,0 +1,40 @@
+.RatingScreenContainer {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-content: center; */
+}
+
+.message {
+  font-size: 20px;
+  font-family: Roboto-regular;
+}
+
+.ratingStarBox {
+  display: flex;
+  justify-content: center;
+}
+
+.mainText {
+  font-family: Roboto-regular;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.subText {
+  font-family: Roboto-regular;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #0f1828b2;
+  width: 300px;
+  margin: auto;
+  margin-bottom: 23px;
+  margin-top: 8px;
+}

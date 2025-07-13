@@ -1,0 +1,96 @@
+.container {
+  display: flex;
+  margin-left: 30px;
+}
+
+.flexible {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.circle {
+  border-radius: 50%;
+  background-color: #5d79c2;
+  border: 1px solid #a7a7a7;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5px; /* Adjust spacing between circles */
+  margin-top: 5px;
+  height: 40px;
+  width: 40px;
+  flex-shrink: 0;
+  font-family: Roboto-regular;
+  font-size: 14px;
+  font-style: normal;
+  /* font-weight: 600; */
+  line-height: normal;
+  opacity: 0.8;
+}
+
+.circleActive {
+  border-radius: 50%;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9px;
+  margin: 5px;
+}
+
+.circleCompleted {
+  border-radius: 50%;
+  background-color: #50b089;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+}
+
+.circleActiveContainer {
+  margin-bottom: 5px; /* Adjust spacing between circles */
+  margin-top: 5px;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+}
+
+.line {
+  height: 42px;
+  width: 2px;
+  background-color: #a7a7a7;
+  margin: 0 auto;
+}
+
+.stepText {
+  margin-left: 15px; /* Adjust spacing between circle and text */
+}
+
+.stepNumberText {
+  color: #ffffff99;
+  font-family: Roboto-regular;
+  opacity: 0.6;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: left;
+}
+
+.stepLabel {
+  color: #FFFFFF;
+  text-align: left;
+  font-family: Roboto-regular;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+/* Active line */
+.line.active {
+  background-color: #50b089; /* Change color to indicate active line */
+}

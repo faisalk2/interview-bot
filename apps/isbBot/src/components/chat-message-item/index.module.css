@@ -1,0 +1,67 @@
+.speechBubbleContainer {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  margin-left: 8px;
+}
+
+.speechBubbleContainer1{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  margin-left: -9px;
+}
+
+.userImage {
+  width: 32px;
+  height: 32px;
+  margin-top: 6px;
+  margin-right: 10px;
+  margin-left: -4px;
+  border-radius: 40px;
+}
+
+.loadingProfileContainer {
+  display: flex;
+  margin-left: -5px;
+  align-items: center;
+  justify-content: center;
+}
+
+.profileContainer {
+  margin-left: 3px;
+  margin-right: 1px;
+  margin-top: 1px;
+  overflow: hidden;
+  padding: 11px 5px 0px 5px;
+  /* border: 1px solid #000000; */
+  border-radius: 8px;
+}
+
+div.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  max-width: 100%;
+  margin-left: 8px;
+}
+
+.profileImage {
+  width: 32px;
+  height: 32px;
+  margin-top: -12px;
+}
+
+div.loadingContainer > div {
+  background-color: rgb(251, 233, 220);
+}
+
+
+@media (max-width: 1600px) {
+  .speechBubbleContainer1{
+    
+    margin-left: 10px;
+  }
+}

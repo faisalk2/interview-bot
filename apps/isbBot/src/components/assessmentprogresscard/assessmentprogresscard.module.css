@@ -1,0 +1,79 @@
+.container {
+  background-color: #4753a6;
+  border-radius: 12px;
+  box-sizing: border-box;
+  padding: 19px;
+}
+
+.flexBox {
+  display: flex;
+}
+
+.progressCardTitle {
+  font-family: Segoe UI;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 18px;
+  color: #FFFFFF;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.progressCardLabel {
+  font-family: Segoe UI;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: left;
+  color: #FFFFFF;
+  margin-bottom: 10px;
+}
+
+.timer {
+  font-family: Segoe UI;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 18px;
+  text-align: left;
+  color:#FFFFFF
+}
+
+.totaQuestionsAttendValue,
+.totaQuestionsSkipped {
+  font-family: Segoe UI;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 18px;
+  text-align: left;
+  color: #FFFFFF;
+}
+
+.totaQuestionsAttendValue > span:first-child,
+.totaQuestionsSkipped > span:first-child {
+  font-family: Segoe UI;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 18px;
+  text-align: left;
+  color: #038b00;
+}
+
+.totaQuestionsSkipped > span:first-child {
+  color: #ff6b00;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+}
+
+.icon > img {
+  width: 100%;
+}
+
+.ProgressValue {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,15 @@
+.active {
+  height: 5px;
+  width: 30px;
+  background: #FFFFFF;
+  margin: 3px;
+  cursor: pointer;
+}
+
+.inactive {
+    height: 5px;
+    width: 30px;
+    background: #6C799B;
+    margin: 3px;
+    cursor: pointer;
+  }

@@ -1,0 +1,211 @@
+.label {
+  text-align: left;
+  font-family: Roboto-regular;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  color: #2e3b42;
+  margin-bottom: 6px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.inputField {
+  border: 1px solid #d5dae1;
+  padding: 7px;
+  width: 100%;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.inputField::placeholder {
+  font-family: Roboto-regular;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21.28px;
+  text-align: left;
+  color: #8896ab;
+}
+
+.inputField:active,
+.inputField:focus {
+  outline: none;
+}
+
+.btnFill {
+  padding: 7px;
+  width: 100%;
+  background-color: #2b4078;
+  color: #ffffff;
+  border-radius: 8px;
+  font-family: Roboto-bold;
+  font-size: 17px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.btnFill:disabled {
+  /* Apply your desired styles */
+  opacity: 0.5; /* Example: reduce opacity to visually indicate it's disabled */
+  cursor: not-allowed; /* Change cursor to indicate it's not clickable */
+  /* You can add more styles here as needed */
+}
+
+.btnFill:active {
+  opacity: 0.6;
+}
+
+.LinkedInBtn {
+  padding: 7px;
+  width: 100%;
+  background-color: #0865c4;
+  color: #ffffff;
+  border-radius: 8px;
+  font-family: Roboto-bold;
+  font-size: 17px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.pinInputContainer {
+  display: flex;
+  gap: 20px;
+  /* justify-content: center; */
+}
+
+/* image upload */
+
+.imgInputContainer {
+  border: 1.5px dashed #95a9b4;
+  background: #f4f8fa;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+/* phone number input */
+
+.phoneInputContainer input {
+  border: none;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.phoneInputContainer input::placeholder {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.phoneInputContainer input:active,
+.phoneInputContainer input:focus {
+  outline: none;
+  border: none;
+}
+
+/* video upload component */
+
+.uploadedSuccessText {
+  font-family: Roboto-bold;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 21.28px;
+  text-align: left;
+  color: #50b089;
+  margin-right: 10px;
+}
+
+.uploadedFailText {
+  font-family: Roboto-bold;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 21.28px;
+  text-align: left;
+  color: #ee6c4d;
+  margin-right: 10px;
+}
+
+/* percentage button */
+
+.percentageButton {
+  height: 40px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 400 !important;
+  overflow: hidden;
+  border: 1px solid #245bff;
+  background: #ffffff;
+  position: relative;
+  margin: 0px;
+}
+
+.percentageBar {
+  height: 100%;
+  background-color: #2567e133;
+  transition: width 0.5s ease;
+}
+
+.percentageText {
+  color: #245bff;
+  z-index: 2;
+  font-family: Roboto-bold;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* sign out btn */
+
+.signoutBtn:active {
+  opacity: 0.6;
+}
+
+.skipBtnContainer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.skipBtn {
+  font-family: Roboto-bold;
+  color: #ff476a;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-right: 20px;
+  border: 1px solid #ff476a;
+  border-radius: 6px;
+  padding: 4px 6px 6px 6px;
+}
+
+.skipBtn:disabled {
+  opacity: 0.6;
+}
+
+.skipBtn:active {
+  opacity: 0.6;
+}
+
+.mobilePopupHeading {
+  font-family: Roboto-bold;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 38px;
+  text-align: center;
+  color: #2b4078;
+}
+
+.mobilePopupText {
+  font-family: Roboto-regular;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: center;
+  color: #333f51;
+  margin-bottom: 30px;
+}

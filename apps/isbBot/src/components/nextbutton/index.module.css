@@ -1,0 +1,25 @@
+.nextButton {
+  display: flex;
+  width: 200px;
+  height: 40px;
+  padding: 12px 18px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  font-size: 16px;
+  font-weight: 400;
+  border-radius: 8px;
+  background: #245bff;
+  box-shadow: 0px 1px 2px 0px rgba(105, 81, 255, 0.05);
+  color: #fff;
+  margin-top: 20px;
+}
+
+.nextButton:disabled {
+  opacity: 0.6;
+}
+
+.nextButton:active {
+  opacity: 0.6;
+}

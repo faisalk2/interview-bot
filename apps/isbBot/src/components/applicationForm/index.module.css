@@ -1,0 +1,176 @@
+.sideBar {
+  background-color: #192890;
+  width: 300px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.iviIconContainer {
+  margin: 24px 30px 50px 30px;
+}
+
+.sideBarImage {
+  position: absolute;
+  top: 86px;
+  bottom: 300px;
+}
+
+.sideBarImg {
+  position: absolute;
+  border: 1px solid black;
+}
+
+/* personal details */
+
+.fieldsContainer {
+  display: flex;
+  gap: 20px;
+}
+
+.fieldsContainer > div {
+  width: 100%;
+}
+
+.personalDetailsContainer {
+  display: flex;
+}
+
+/* upload photo */
+
+.imageGuidline {
+  color: rgba(51, 63, 81, 0.7);
+  font-family: Roboto-regular;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding-left: 20px;
+  margin-top: 15px;
+}
+
+.imageGuidline > li {
+  margin-bottom: 8px;
+}
+
+.viewInstructions {
+  color: var(--Color-1, #2b4078);
+  font-family: Roboto-regular;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration-line: underline;
+  margin-top: 4px;
+}
+
+.photoContainer {
+  width: 480px;
+  margin-left: 30px;
+}
+
+/* email box */
+
+.emailText {
+  color: #ffffffcc;
+  font-family: Roboto-regular;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px; /* 157.143% */
+  padding-bottom: 15px;
+}
+
+.emailText > a {
+  opacity: 0.8;
+  color: var(--Text, #333f51);
+  font-family: Roboto-regular;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  text-decoration-line: underline;
+  cursor: pointer;
+}
+
+/* application questions */
+
+.applicationQuestionContainer {
+  display: flex;
+  position: relative;
+}
+
+div.videoInputContainer {
+  border: 1px solid #d5dae1;
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 16px;
+}
+
+.videoText {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+div.videoText > div {
+  font-family: Roboto-medium;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 26px;
+  text-align: left;
+  color: #2E3B42;
+}
+
+.videoGuidelines {
+  position: fixed;
+  right: 0;
+  top: 50px;
+  bottom: 0;
+  width: 375px;
+  height: 95vh;
+  overflow-y: scroll;
+  background-color: #F4F8FA;
+  padding-bottom: 60px;
+}
+
+.guidelineHeading {
+  color: var(--Color-1, #2b4078);
+  font-family: Roboto-regular;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding: 35px 30px 10px 30px;
+  border-bottom: 1px solid #cccccc;
+  margin-bottom: 16px;
+}
+
+.popUpHeading {
+  font-family: Roboto-bold;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 29.26px;
+  text-align: left;
+  color: #2b4078;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.popUpText {
+  font-family: Segoe UI;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  text-align: center;
+  color: #333f51;
+  margin-bottom: 30px;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}

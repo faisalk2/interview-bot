@@ -1,0 +1,236 @@
+.heyText {
+  font-family: Roboto-bold;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 37.24px;
+  text-align: left;
+  color: #ffffff;
+}
+
+.carouselCardBanner {
+  width: 100%;
+}
+
+.warningInformation {
+  display: flex;
+  gap: 12px;
+  background-color: #fff;
+  padding: 5px 12px;
+  border-radius: 12px;
+  margin-top: 25px;
+  align-items: center;
+}
+
+.warningLogo {
+  display: flex;
+  margin-top: 5px;
+}
+
+.carusalCardBanner > img {
+  object-fit: cover;
+  border: 1px solid red;
+}
+
+.heyText + div {
+  font-family: Roboto-bold;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 53.2px;
+  text-align: left;
+  color: #ffffff;
+  max-width: 628px;
+  margin-bottom: 20px;
+}
+
+.signInBackground {
+  background-image: url("../../assets/images/loginBg.png");
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 60vw;
+  position: relative;
+}
+
+.overlayImage {
+  /* Position the overlay absolutely within the container */
+  position: absolute;
+
+  /* Adjust top, left, bottom, right values to position the overlay as per your requirement */
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+  /* Ensure the overlay image fills the container */
+  width: 100%;
+  height: 100%;
+
+  /* Optionally, adjust z-index to control the stacking order */
+  z-index: 0; /* Ensure it's above the background */
+}
+
+.signDetailsContainer {
+  position: relative;
+  z-index: 1;
+  padding-top: 50px;
+  padding-left: 100px;
+}
+
+.carouseCard {
+  background-color: #ffffffe5;
+  margin-bottom: 20px;
+  padding: 30px 45px;
+  border-radius: 12px;
+  margin-right: 50px;
+}
+
+.what {
+  display: flex;
+  margin-bottom: 30px;
+  gap: 25px;
+  align-items: center;
+}
+
+div.carouseCard div {
+  font-family: Roboto-regular;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26.4px;
+  text-align: left;
+  color: #355575;
+}
+
+div.carouseCard div span {
+  font-family: Roboto-bold;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 23.94px;
+  letter-spacing: 0.02em;
+  text-align: left;
+}
+
+div.carouseCard div.what img {
+  width: 46px;
+  height: 46px;
+}
+
+div.carouseCard div.what span {
+  font-family: Roboto-bold;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 26.6px;
+  text-align: left;
+  color: #2b4078;
+}
+
+.documents {
+  display: flex;
+  align-items: center;
+}
+
+.documents span {
+  margin-left: 10px;
+}
+
+ul.list {
+  list-style-type: disc; /* Change the bullet points to squares */
+}
+
+.instructionLists {
+  list-style-type: disc;
+  padding-left: 19px;
+  flex-direction: column;
+  display: flex;
+  gap: 10px;
+}
+
+.instructionLists > li {
+  list-style-type: disc;
+  font-family: Roboto-regular;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 19.95px;
+  text-align: justify;
+}
+
+.listHeader {
+  font-family: Roboto-bold;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 21.28px;
+  text-align: justify;
+  padding: 10px 0px 10px 3px;
+}
+
+.listHeader1 {
+  font-family: Roboto-bold;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 21.28px;
+  text-align: justify;
+  padding-bottom: 10px;
+  padding-left: 3px;
+}
+
+div.interviewDateContainer > div.round1Text {
+  color: #333f51;
+  font-family: Roboto-bold;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.4px;
+}
+
+div.interviewDateContainer > div.deadlineDateContainer {
+  display: flex;
+}
+
+div.interviewDateContainer > div.deadlineDateContainer > div {
+  font-family: ShipporiAntiqueB1-regular;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.6px;
+  padding: 14px;
+}
+
+div.interviewDateContainer > div.deadlineDateContainer > div:first-child {
+  background-color: #ff0000;
+  color: #fff;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  border: 1px solid #ff0000;
+}
+
+div.interviewDateContainer > div.deadlineDateContainer > div:nth-child(2) {
+  background-color: #fff;
+  color: #3d3d3d;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  border: 1px solid #cdcdcd;
+}
+
+@media (max-width: 992px) {
+  .signInBackground {
+    background-image: url("../../assets/images/loginBg.png");
+    height: auto;
+    overflow-y: visible;
+    overflow-x: hidden;
+    width: 100vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .signInBackground {
+    background-image: url("../../assets/images/loginBgMobile.png");
+    height: auto;
+    overflow-y: visible;
+    overflow-x: hidden;
+    width: 100vw;
+  }
+}
