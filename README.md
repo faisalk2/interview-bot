@@ -1,4 +1,4 @@
-# Rahat Bot
+# Interview bot
 
 
 ## Requirements :scroll:
