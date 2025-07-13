@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import Timer from './Timer'
 import PauseInterview from './PauseInterview'
 import InterviewJobDescriptionPopup from './InterviewJobDescriptionPopup'
-import iviInterviewScreen from '../../assets/svg/chatbotImg.jpg'
+// import iviInterviewScreen from '../../assets/svg/chatbotImg.jpg'
 import { useChatContext } from '../../context/ChatContext'
 
 
@@ -65,7 +65,7 @@ const InterviewTopBar = ({
                 width: '27%',
                 padding: "12px 20px",
             }}>
-                <img src={iviInterviewScreen.src} alt="isb" style={{ width: '50px', height: '50px' }} />
+                {/* <img src={iviInterviewScreen.src} alt="isb" style={{ width: '50px', height: '50px' }} /> */}
 
             </Box>
             <Box
