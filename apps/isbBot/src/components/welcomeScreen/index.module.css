@@ -1,6 +1,6 @@
 .container {
   background-image: url("../../assets/svg/welcomeScreenBackground.svg");
-  height: calc(100vh - 75px);
+  height: 100vh; 
   box-sizing: border-box;
   /* Ensure the image doesn't repeat */
   background-repeat: no-repeat;

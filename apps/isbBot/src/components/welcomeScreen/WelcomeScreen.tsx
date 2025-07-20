@@ -110,7 +110,7 @@ export const WelcomeScreen = ({ handleInterviewStart }: { handleInterviewStart: 
     //css
     const titleText: CSSProperties = {
         display: "flex",
-        justifyContent: "space-between",
+        justifyContent: "center",
         alignContent: "center",
         padding: '0px 30px',
         width: "100%",
@@ -141,14 +141,12 @@ export const WelcomeScreen = ({ handleInterviewStart }: { handleInterviewStart: 
     }
 
     return (
-        <div>
-            <Navbar />
-            <div className={styles.container}>
-                <div style={{ height: '100vh', overflowY: 'scroll', paddingTop: '100px', paddingBottom: '30px' }} >
-                    <h1 className={styles.headerTitle} style={titleText}><div></div><div>Welcome to ivi assessment</div><div style={{ paddingTop: '15px' }}><LogoutBtn onClick={handleLogout} /></div></h1>
-                    <InstructionGuideLine check={check} setCheck={setCheck} showCheck={true} />
-                    <button onClick={handleInterviewStart} className={styles?.submitButton} disabled={!check} >Start The Assessment</button>
-                </div>
+        <div className={styles.container}>
+            <div style={{ height: '100vh', overflowY: 'scroll', paddingTop: '100px', paddingBottom: '30px' }} >
+                <h1 style={titleText}><div>Welcome to AI Assessment</div>
+                </h1>
+                <InstructionGuideLine check={check} setCheck={setCheck} showCheck={true} />
+                <button onClick={handleInterviewStart} className={styles?.submitButton} disabled={!check} >Start The Assessment</button>
             </div>
         </div>
     );

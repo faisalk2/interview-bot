@@ -22,7 +22,7 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
 module.exports = withBundleAnalyzer({
   env: {
     NEXT_PUBLIC_ENV: "PRODUCTION",
-    NEXT_PUBLIC_BASE_URL: "https://ivi-isb-backend.esmagico.net", //your next configs goes here
+    NEXT_PUBLIC_BASE_URL: "", //your next configs goes here
   },
   nextConfig,
   typescript: {

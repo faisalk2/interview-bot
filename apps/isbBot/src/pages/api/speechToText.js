@@ -31,7 +31,7 @@ const parseFormData = async (req) => {
 export default async function handler (req, res) {
   if (req.method === "POST") {
    console.log('hellow')
-    const OPENAI_API_KEY = process.env.NEXT_PUBLIC_OPENAI_API_KEY;
+    const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
     openai.apiKey = OPENAI_API_KEY;
     const  formData  = req.body;
     console.log('hellow1')

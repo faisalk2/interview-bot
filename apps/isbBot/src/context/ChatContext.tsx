@@ -3,7 +3,8 @@ import ProfileImage from '../assets/images/profileAI.png'
 import { IntlProvider } from "react-intl";
 import axios from 'axios';
 import { useRouter } from "next/router";
-import { getUserData } from '../services/applicationFormApi';
+
+
 
 type ContextType = {
   messages: any[],
@@ -84,7 +85,9 @@ const ChatContext: FC<{
   children: ReactElement;
 }> = ({ locale, children, userObjId, localeMsgs, setLocale }) => {
   const [list, setList] = useState<PromptData[]>([])
-  const [messages, setMessages] = useState<Array<any>>([]);
+  const [messages, setMessages] = useState<Array<any>>([{
+    message: `😊 Hello! We'd love to know — which role are you applying for?`, position: "left"
+  }]);
   const [startTyping, setStartTyping] = useState(false);
   const [loading, setLoading] = useState(false);
   const [isMsgReceiving, setIsMsgReceiving] = useState(false);
@@ -184,11 +187,6 @@ const ChatContext: FC<{
       }
     }
   );
-  useEffect(() => {
-    if (userId && messages && messages.length == 0) {
-      sendMessage('Hello', '')
-    }
-  }, [inititalDataLoaded])
 
   return (
 

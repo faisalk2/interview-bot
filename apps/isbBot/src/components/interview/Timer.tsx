@@ -20,32 +20,32 @@ function Timer({ seconds,
     return number % 2 === 0;
   }
 
-  // useEffect(() => {
-  //   if (isTimerStop) return
-  //   const interval = setInterval(() => {
-  //     if (hours === 0 && minutes === 0 && seconds === 0) {
-  //       clearInterval(interval);
-  //       return;
-  //     }
+  useEffect(() => {
+    if (isTimerStop) return
+    const interval = setInterval(() => {
+      if (hours === 0 && minutes === 0 && seconds === 0) {
+        clearInterval(interval);
+        return;
+      }
 
-  //     if (seconds > 0) {
-  //       handleSeconds((prevSeconds: number) => prevSeconds - 1);
-  //     } else {
-  //       if (minutes > 0) {
-  //         handleMinutes((prevMinutes: number) => prevMinutes - 1);
-  //         handleSeconds(59);
-  //       } else {
-  //         if (hours > 0) {
-  //           handleHours((prevHours: number) => prevHours - 1);
-  //           handleMinutes(59);
-  //           handleSeconds(59);
-  //         }
-  //       }
-  //     }
-  //   }, 1000);
+      if (seconds > 0) {
+        handleSeconds((prevSeconds: number) => prevSeconds - 1);
+      } else {
+        if (minutes > 0) {
+          handleMinutes((prevMinutes: number) => prevMinutes - 1);
+          handleSeconds(59);
+        } else {
+          if (hours > 0) {
+            handleHours((prevHours: number) => prevHours - 1);
+            handleMinutes(59);
+            handleSeconds(59);
+          }
+        }
+      }
+    }, 1000);
 
-  //   return () => clearInterval(interval);
-  // }, [hours, minutes, seconds, isTimerStop]);
+    return () => clearInterval(interval);
+  }, [hours, minutes, seconds, isTimerStop]);
 
 
   const getAudioUrl = async (text: string) => {
