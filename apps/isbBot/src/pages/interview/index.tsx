@@ -158,25 +158,25 @@ const Interview: React.FC = () => {
     };
 
     const handleDataAvailable = async (event: BlobEvent, type: string, isNavigate: boolean) => {
-        if (event.data.size > 0) {
-            const videoBlob = new Blob([event.data], { type: 'video/mp4' });
-            const formData = new FormData();
-            formData.append('recording_chunk', videoBlob)
-            // @ts-ignore
-            formData.append('candidate_id', userId)
-            formData.append('recording_type', type)
-            try {
-                apiCallCount.current = apiCallCount.current + 1
-                const resp = await postVideoChunk(formData)
-                apiCallCount.current = apiCallCount.current - 1
-                if (interviewEnd.current && isNavigate && apiCallCount.current == 0) {
-                    router.push('/interview-completed')
-                }
+        // if (event.data.size > 0) {
+        //     const videoBlob = new Blob([event.data], { type: 'video/mp4' });
+        //     const formData = new FormData();
+        //     formData.append('recording_chunk', videoBlob)
+        //     // @ts-ignore
+        //     formData.append('candidate_id', userId)
+        //     formData.append('recording_type', type)
+        //     try {
+        //         apiCallCount.current = apiCallCount.current + 1
+        //         const resp = await postVideoChunk(formData)
+        //         apiCallCount.current = apiCallCount.current - 1
+        //         if (interviewEnd.current && isNavigate && apiCallCount.current == 0) {
+        //             router.push('/interview-completed')
+        //         }
 
-            } catch (e) {
-                console.log('error while calling post video chunk ', e)
-            }
-        }
+        //     } catch (e) {
+        //         console.log('error while calling post video chunk ', e)
+        //     }
+        // }
     };
 
     const stopScreenSharing = () => {
@@ -200,11 +200,6 @@ const Interview: React.FC = () => {
 
         stopScreenSharing();
 
-        const request = {
-            id: localStorage.getItem("userId") ?? "",
-            navigator_state: 6
-        }
-        const resp = await postUserData(request, localStorage.getItem("userToken"), router)
     };
 
     const handleStartInterview = () => {
@@ -216,8 +211,9 @@ const Interview: React.FC = () => {
     const handleStopRecording = async () => {
         const userConfirmed = confirm("Do you want to end the test?");
         if (userConfirmed) {
-            setInterviewCompleted(true)
-            await stopRecording();
+            // setInterviewCompleted(true)
+            router.push('/interview-completed')
+            // await stopRecording();
         }
     }
 

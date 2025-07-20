@@ -77,14 +77,14 @@ const InterviewTopBar = ({
                     padding: '12px 32px'
                 }}
             >
-                <Box
+                {/* <Box
                     color='#192890'
                     fontSize={'14px'}
                     fontWeight={700}
                     whiteSpace={'nowrap'}
                 >
                     {remainingQuestions?.attempted ?? 0} {remainingQuestions?.attempted <= 1 ? 'question' : 'questions'} attempted | Around {remainingQuestions?.remaining ?? 0} {remainingQuestions?.remaining <= 1 ? 'question' : 'questions'} remain
-                </Box>
+                </Box> */}
                 <Timer
                     seconds={seconds}
                     handleSeconds={handleSeconds}

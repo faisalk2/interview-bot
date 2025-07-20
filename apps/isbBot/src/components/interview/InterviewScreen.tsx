@@ -58,63 +58,63 @@ const InterviewScreen = ({
     const [isBorderOff, setIsBorderOff] = useState(false);
     console.log('messages==========>>>>>>>>>>>>>>>>>>>>>', messages)
 
-    const getAudioUrl = async (text: string) => {
-        try {
-            const response = await axios.post(`${process.env.NEXT_PUBLIC_ISB_BACKEND_BASE_URL}/api/user/text-speech/`, { input: text, voice: 'nova' });
-            setStartTyping(true);
-            return response?.data;
-        } catch (e) {
-            console.log('error while calling t2s api', e)
-        }
-    }
+    // const getAudioUrl = async (text: string) => {
+    //     try {
+    //         const response = await axios.post(`${process.env.NEXT_PUBLIC_ISB_BACKEND_BASE_URL}/api/user/text-speech/`, { input: text, voice: 'nova' });
+    //         setStartTyping(true);
+    //         return response?.data;
+    //     } catch (e) {
+    //         console.log('error while calling t2s api', e)
+    //     }
+    // }
 
-    const handleaudio = async (message: string) => {
-        if (!message?.trim() && !loading) {
-            toast.error('No Audio');
-            return;
-        }
+    // const handleaudio = async (message: string) => {
+    //     if (!message?.trim() && !loading) {
+    //         toast.error('No Audio');
+    //         return;
+    //     }
 
-        try {
-            setReadyToCall(true);
-            setAudioLoading(true)
-            const resp = await getAudioUrl(message);
-            console.log('audio url', resp);
-            setAudioLoading(false)
-            if (audioRef.current) {
-                audioRef.current.pause();
-                audioRef.current.currentTime = 0;
-            }
+    //     try {
+    //         setReadyToCall(true);
+    //         setAudioLoading(true)
+    //         const resp = await getAudioUrl(message);
+    //         console.log('audio url', resp);
+    //         setAudioLoading(false)
+    //         if (audioRef.current) {
+    //             audioRef.current.pause();
+    //             audioRef.current.currentTime = 0;
+    //         }
 
-            const audio = new Audio(resp?.detail);
-            audioRef.current = audio;
+    //         const audio = new Audio(resp?.detail);
+    //         audioRef.current = audio;
 
-            audioRef.current.onloadedmetadata = async () => {
-                try {
-                    if (audioRef.current) {
-                        await audioRef.current.play();
-                        console.log('Audio is playing');
-                        setStartTyping(true);
-                    }
-                } catch (error) {
-                    console.error('Error playing audio:', error);
-                    setReadyToCall(false);
-                }
-            };
+    //         audioRef.current.onloadedmetadata = async () => {
+    //             try {
+    //                 if (audioRef.current) {
+    //                     await audioRef.current.play();
+    //                     console.log('Audio is playing');
+    //                     setStartTyping(true);
+    //                 }
+    //             } catch (error) {
+    //                 console.error('Error playing audio:', error);
+    //                 setReadyToCall(false);
+    //             }
+    //         };
 
-            audioRef.current.onended = () => {
-                console.log("Audio finished playing");
-                setReadyToCall(false);
-            };
+    //         audioRef.current.onended = () => {
+    //             console.log("Audio finished playing");
+    //             setReadyToCall(false);
+    //         };
 
-            audioRef.current.onerror = (error) => {
-                console.error('Audio error:', error);
-                setReadyToCall(false);
-            };
-        } catch (error) {
-            console.error('Error fetching audio URL:', error);
-            setReadyToCall(false);
-        }
-    };
+    //         audioRef.current.onerror = (error) => {
+    //             console.error('Audio error:', error);
+    //             setReadyToCall(false);
+    //         };
+    //     } catch (error) {
+    //         console.error('Error fetching audio URL:', error);
+    //         setReadyToCall(false);
+    //     }
+    // };
 
     const handleEditAnswer = () => {
         setIsShortcutPopupOpen(false);
@@ -227,34 +227,12 @@ const InterviewScreen = ({
         };
     }, [sendMessage, setInputAnswer, inputAnswer]);
 
-    const handleRemainingQuestions = async () => {
-        const userId = localStorage.getItem('userId') ?? ''
-        try {
-            const response1 = await axios.get(
-                `${process.env.NEXT_PUBLIC_BASE_URL}/api/user/question-attempted/${userId}/`);
-            console.log('response1=========================', response1)
-            setRemainingQuestion({
-                remaining: response1?.data?.remaining,
-                attempted: response1?.data?.attempted
-            })
-        } catch (e) {
-            console.log('error while calling remaining question api', e)
-        }
-    }
 
     useEffect(() => {
         // Focus the input field when the component mounts
         if (inputRef.current) {
             // @ts-ignore
             inputRef.current.focus();
-        }
-
-        if (question && !loading) {
-            handleaudio(question);
-        }
-
-        if (question) {
-            handleRemainingQuestions()
         }
 
         setKey(prevKey => prevKey + 1);
@@ -370,42 +348,6 @@ const InterviewScreen = ({
                                     }}
                                 >
                                     {`Here's`} the Question
-                                    <Box sx={{ marginLeft: 'auto', display: 'flex', gap: '10px' }}>
-                                        {audioLoading ? <Box>
-                                            {/* @ts-ignore */}
-                                            <Spinner /></Box> : readyToCall ? (
-                                                <>
-                                                    <img
-                                                        src={Pause.src}
-                                                        alt='pause icon'
-                                                        style={{ cursor: "pointer" }}
-                                                        onClick={() => {
-                                                            setReadyToCall(false);
-                                                            if (inputRef.current) {
-                                                                // @ts-ignore
-                                                                inputRef.current.focus();
-                                                            }
-                                                            handlePause();
-                                                        }} />
-                                                </>
-                                            ) : (
-                                            <>
-                                                <img
-                                                    style={{ cursor: "pointer" }}
-                                                    src={Play.src}
-                                                    alt='play icon'
-                                                    onClick={() => {
-                                                        setReadyToCall(true);
-                                                        if (inputRef.current) {
-                                                            // @ts-ignore
-                                                            inputRef.current.focus();
-                                                        }
-                                                        handleaudio(question);
-                                                    }}
-                                                />
-                                            </>
-                                        )}
-                                    </Box>
                                 </Box>
                                 <Box
                                     sx={{
@@ -547,7 +489,7 @@ const InterviewScreen = ({
                         </Box>
                     }
 
-                    {question && !loading && !question.includes("Please give me feedback") && <Box
+                    {/* {question && !loading && !question.includes("Please give me feedback") && <Box
                         sx={{
                             display: "flex",
                             justifyContent: "center",
@@ -564,7 +506,7 @@ const InterviewScreen = ({
                             setIsRecordingStart={setIsRecordingStart}
                             handleSend={handleSend}
                         />
-                    </Box>}
+                    </Box>} */}
                 </Box>
             </div >
         </>
